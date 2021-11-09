@@ -78,6 +78,11 @@ public:
         for(int i = 0; i < s.size(); ++i){
             if(s[i] == '\n'){
                 cur++;
+                if(temp == str){
+                    return cur;
+                }
+                temp.clear();
+                continue;
             }
             if(s[i] == ' '){
                 if(temp == str){
